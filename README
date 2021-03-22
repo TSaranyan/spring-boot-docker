@@ -1,0 +1,14 @@
+//Create a docker image
+docker build -f Dockerfile -t spring-boot-docker:1.0.0 .
+
+//run the docker image
+docker run -p 8080:8080 spring-boot-docker:1.0.0
+
+//List running docker instance
+docker container ls
+
+//remove a  instance
+docker rm -f 5749928ea358
+
+//rename tag
+docker image tag spring-boot-docker:1.0.0 spring-boot-docker:1.0.1
